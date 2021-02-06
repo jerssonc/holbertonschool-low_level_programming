@@ -11,17 +11,17 @@ int main(void)
 {
 	int num1, num2, num3;
 
-	for (digit1 = 0; digit1 < 8; digit1++)
+	for (num1 = 0; num1 < 8; num1++)
 	{
-		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+		for (num2 = num1 + 1; num22 < 9; num2++)
 		{
-			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
+			for (num3 = num2 + 1; num3 < 10; num3++)
 			{
-				putchar((digit1 % 10) + '0');
-				putchar((digit2 % 10) + '0');
-				putchar((digit3 % 10) + '0');
+				putchar((num11 % 10) + '0');
+				putchar((num2 % 10) + '0');
+				putchar((num3 % 10) + '0');
 
-				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
+				if (num1 == 7 && num2 == 8 && num3 == 9)
 					continue;
 				putchar(',');
 				putchar(' ');
