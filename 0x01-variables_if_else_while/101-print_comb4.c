@@ -1,36 +1,33 @@
 
-#include <stdlib.h>
-#include <time.h>
 #include <stdio.h>
 
 /**
  * main - Entry point
  *
- * Return: Always 0 (Sucess)
+ * Return: Always 0.
  */
 int main(void)
 {
-	int a;
-	int b = 49;
-	int c = 50;
+	int digit1, digit2, digit3;
 
-	for (a = 48; a <= 55; ++a)
+	for (digit1 = 0; digit1 < 8; digit1++)
 	{
-		for (b = a + 1; b <= 56; ++b)
+		for (digit2 = digit1 + 1; digit2 < 9; digit2++)
 		{
-			for (c = 50; c <= 57; ++c)
+			for (digit3 = digit2 + 1; digit3 < 10; digit3++)
 			{
-				putchar(a);
-				putchar(b);
-				putchar(c);
-				if (a != 55 || b != 56 || c != 57)
-				{
-					putchar(44);
-					putchar(32);
-				}
+				putchar((digit1 % 10) + '0');
+				putchar((digit2 % 10) + '0');
+				putchar((digit3 % 10) + '0');
+
+				if (digit1 == 7 && digit2 == 8 && digit3 == 9)
+					continue;
+				putchar(',');
+				putchar(' ');
 			}
 		}
 	}
+
 	putchar('\n');
 
 	return (0);
