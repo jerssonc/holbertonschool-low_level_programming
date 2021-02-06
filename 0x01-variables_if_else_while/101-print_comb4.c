@@ -1,36 +1,36 @@
 
+#include <stdlib.h>
 #include <stdio.h>
 
 /**
  * main - Entry point
  *
- * Return: Always 0.
+ * Return: Always 0 (Sucess)
  */
-
 int main(void)
 {
-	int num1, num2, num3;
+	int a;
+	int b = 49;
+	int c = 50;
 
-	for (num1 = 0; num1 < 8; num1++)
+	for (a = 48; a <= 55; ++a)
 	{
-		for (num2 = num1 + 1; num22 < 9; num2++)
+		for (b = a + 1; b <= 56; ++b)
 		{
-			for (num3 = num2 + 1; num3 < 10; num3++)
+			for (c = 50; c <= 57; ++c)
 			{
-				putchar((num11 % 10) + '0');
-				putchar((num2 % 10) + '0');
-				putchar((num3 % 10) + '0');
-
-				if (num1 == 7 && num2 == 8 && num3 == 9)
-					continue;
-				putchar(',');
-				putchar(' ');
+				putchar(a);
+				putchar(b);
+				putchar(c);
+				if (a != 55 || b != 56 || c != 57)
+				{
+					putchar(44);
+					putchar(32);
+				}
 			}
 		}
 	}
-
 	putchar('\n');
-
 	return (0);
 }
 
